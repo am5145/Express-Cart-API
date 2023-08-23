@@ -163,4 +163,6 @@ Used express-jwt  for authentication - will give jwt token, according to that we
 Env. variable used - 
 API_URL - so that dont have to use same thing again and again.
 secret - any key, use to make authorization token (jwt)
-CONNECTION_STRING - to connect with mongodb
+CONNECTION_STRING - to connect with mongodb 
+Please take your own link to connect with database and you own secret for jwt token.
+I know I shouldn't have to add env file for security and privacy purpose and should add it in gitignore , but i added it so that there will not be any confusion regarding working of project
