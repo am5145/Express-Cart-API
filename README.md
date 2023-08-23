@@ -67,14 +67,16 @@ PUT      /api/v1/carts/:id  -  add/remove product from cart
 DELETE   /api/v1/carts/:id   - clear cart 
 
 ```
-Used express-jwt  for authentication - will give jwt token, according to that we can perform action.
+Same type of routes for categories
+
+Used express-jwt  for authentication - will give jwt token, according to that we can perform action.(Admin,User)
 
 
-Sample data for order post -
-
+### Sample data for order post -
+```
 {
     "orderItems" : [
-        {
+    {
             "quantity": 3,
             "product" : "5fcfc406ae79b0a6a90d2585"
         },
@@ -90,12 +92,12 @@ Sample data for order post -
     "country": "Czech Republic",
     "phone": "+420702241333",
     "user": "5fd51bc7e39ba856244a3b44"
-}  
+}
+```
 //please change product id and user id according to your data
 
-
-sample data for post users -
-
+### Sample data for post users -
+```
 {
         "name": "Keshav",
         "email": "keshav@gmail.com",
@@ -109,18 +111,19 @@ sample data for post users -
         "country": "INDIA",
 
     }
-
-    Sample data for login user - 
-
+  ```
+### Sample data for login user - 
+```
     {
     "email": "keshav@gmail.com",
     "password": "123456"
 }
+```
 //will give bearrer token for further use of api
 
 
-Sample data for post product -
-
+### Sample data for post product -
+```
 {
         "name": "hii new",
         "description": "mobile",
@@ -135,28 +138,29 @@ Sample data for post product -
         "numReviews": 0,
         "isFeatured": false,
     
-    }// change category id
+    }
+```
+// change category id
 
 
-Sample data for post  categories - 
-
+### Sample data for post  categories - 
+```
 {
         "name": "computer",
         "icon": "some_url",
         "color": "Red",
 }
+```
 
-Sample to post cart/orderItem - 
-
+### Sample to post cart/orderItem - 
+```
         {
             "quantity": 3,
             "product" : "5fcfc406ae79b0a6a90d2585"
         }
+```
 
 Env. variable used - 
 API_URL - so that dont have to use same thing again and again.
 secret - any key, use to make authorization token (jwt)
 CONNECTION_STRING - to connect with mongodb
-
-
-Register, then login and get access token which use for further use of api according to user and admin
